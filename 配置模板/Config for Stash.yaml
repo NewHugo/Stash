@@ -55,8 +55,31 @@ dns:
     - https://dns.alidns.com/dns-query
 
 proxies:
-            
 proxy-groups:
+  - name: SSID Strategy
+    type: select
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SSID.png?raw=true
+    proxies:
+      - Server Strategy
+      - DIRECT
+    ssid-policy:
+    Fuck_Great Fire Wall: DIRECT
+    cellular: Server Strategy
+    default: Server Strategy
+  - name: Outbound Strategy
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static.png?raw=true
+    proxies:
+      - DIRECT
+      - SSID Strategy
+  - name: Server Strategy
+    type: select
+    icon: https://raw.githubusercontent.com/Orz-3/face/master/Static.png?raw=true
+    proxies:
+      - DIRECT
+      - 自动选择
+      - 手动切换
+    
   - name: 手动切换
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -87,10 +110,11 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 香港节点
-      - 日本节点
-      - 美国节点
       - 台湾节点
-
+      - 日本节点
+      - 新加坡节点
+      - 美国节点
+      
   - name: 国内网站
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
@@ -103,6 +127,7 @@ proxy-groups:
       - 日本节点
       - 美国节点
       - 台湾节点
+      - 新加坡节点
       
   - name: YouTube
     type: select
@@ -181,6 +206,12 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     include-all: true
     filter: (?=.*(台|🇨🇳|🇹🇼|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$
+  
+  - name: 新加坡节点
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    include-all: true
+    filter: (?=.*(新|SG|(?i)Singapore))^((?!(港|日|韩|台|美)).)*$
 
   - name: 美国节点
     type: select
