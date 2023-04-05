@@ -56,29 +56,15 @@ dns:
 
 proxies:
 proxy-groups:
-  - name: SSID Strategy
-    type: select
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SSID.png?raw=true
-    proxies:
-      - Server Strategy
-      - DIRECT
-    ssid-policy:
-    Fuck_Great Fire Wall: DIRECT
-    cellular: Server Strategy
-    default: Server Strategy
-  - name: Outbound Strategy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static.png?raw=true
-    proxies:
-      - DIRECT
-      - SSID Strategy
-  - name: Server Strategy
-    type: select
-    icon: https://raw.githubusercontent.com/Orz-3/face/master/Static.png?raw=true
-    proxies:
-      - DIRECT
-      - 自动选择
-      - 手动切换
+- name: ssid-group
+  type: select # 类型必须为 select，兼容原版 clash 配置
+  proxies:
+    - 手动切换
+    - DIRECT
+  ssid-policy:
+    Fuck_Great Fire Wall: DIRECT # 在 SSID 为 Fuck_Great Fire Wall（带有科学上网的Wi-Fi名）中自动切换为 DIRECT直连 策略（Wi-Fi名）
+    cellular: 手动切换 # 在蜂窝数据中自动切换为 手动切换 策略
+    default: 手动切换 # 其他的 SSID 默认为 手动切换
     
   - name: 手动切换
     type: select
