@@ -57,6 +57,19 @@ dns:
 proxies:
             
 proxy-groups:
+  - name: ssid-group
+    type: select # 类型必须为 select，兼容原版 clash 配置
+    proxies:
+      - 手动切换
+      - DIRECT
+    ssid-policy:
+    # 在 SSID 为 Fuck_Great Fire Wall 的 Wi-Fi 中自动切换为 DIRECT 策略
+    # 在蜂窝数据中自动切换为 手动切换 策略
+    # 其他的 SSID 默认为 手动切换
+    Fuck_Great Fire Wall: DIRECT
+    cellular: 手动切换
+    default: 手动切换
+    
   - name: 手动切换
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
