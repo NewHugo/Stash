@@ -1,6 +1,7 @@
 # ⚠️本配置仅适用于Stash，Clash(Premium)内核不可使用本配置
+
 # 本配置，解决DNS泄露，无分流群组，且为自用!
-# 另外，就是新功能的尝鲜，如有问题，还请使用 Awesome.yaml 稳定版
+
 ###########################################################
 # @created: 2023-04-07
 # @update 2023-04-07
@@ -10,3 +11,109 @@
 # https://stash.wiki
 ###########################################################
 # autocorrect-disable
+mixed-port: 7890
+mode: rule
+log-level: info
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    # from: https://github.com/Kr328/ClashForAndroid/blob/ffa559a57102ed8bc20eba41aa236a7764741bf9/core/src/main/golang/native/config/defaults.go#L10
+    # Stun Services
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    # Google Voices
+    - 'lens.l.google.com'
+    # Nintendo Switch
+    - '*.n.n.srv.nintendo.net'
+    # PlayStation
+    - '+.stun.playstation.net'
+    # XBox
+    - 'xbox.*.*.microsoft.com'
+    - '*.*.xboxlive.com'
+    # Microsoft
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
+    # Bilibili CDN
+    - '*.mcdn.bilivideo.cn'
+  # 假如你在使用 proxy-groups => ssid-policy 时，nameserver 下必须配置 system，否则部分请求会异常。
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - 192.168.5.1 # 这里是特定的局域网网关 DNS，如有需要自行替换
+
+http:
+  mitm:
+    - g.cn
+    - "*.google.cn"
+    - "www.firefox.com.cn"
+  rewrite:
+    - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+    - ^https?:\/\/(www.)?firefox\.com\.cn\/(download\/)?$ https://www.mozilla.org/zh-CN/firefox/new/ 302
+
+# 假如用组合订阅多个机场，就没必要使用 subscribe-url 了
+subscribe-url: https://sub.store/download/collection/subs
+# 替换上面文字用于 Stash 获取机场流量信息并在主页显示 （Stash1.6.1 build 287+支持）
+
+# 远程资源默认配置
+remote-resources-default-config: &remote-resources-default-config
+  type: http
+  interval: 86400
+
+proxy-providers:
+  # 全部节点
+  all-sub: &all-sub # 建立锚点
+    <<: *remote-resources-default-config
+    # 此处默认使用 Sub-Store 订阅链接，如果需要使用其他订阅链接，可以替换下面的 url 即可
+    # Sub-Store 与 Clash 类型订阅链接，都可以作为 url 的值。多个链接使用英文符号的竖杠 | 隔开一起写上即可
+    #SSR订阅链接请按后面格式将SSR订阅地址替换后面的《订阅链接》四字,格式为url: "https://api.v1.mk/sub?target=clash&url=订阅链接&emoji=true&list=true&udp=true"
+    url: https://sub.store/download/collection/subs
+    path: ./all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+proxies:
+
+proxy-groups:  
+  - name: SSID 自动策略
+    type: select
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/SSID.png?raw=true
+    proxies:
+    # 此处为配置文件中的已有策略组
+      - Server 策略
+      - DIRECT  # 虽说 DIRECT 是保留字。但必须配置该策略选项，于此代理集的 proxies 下，不然该代理集就只有 1 个策略选项
+    ssid-policy:
+    # cellular: 保留字，指代蜂窝数据条件下
+    # default：保留字，指代其他 SSID 条件下，默认为 DIRECT 策略
+    # DIRECT：保留字，直连策略
+      Fuck_Great Fire Wall: DIRECT  # Fuck_Great Fire Wall，为 SSID 名称
+      cellular: Server 策略
+      default: Server 策略
+
+  - name: Server 策略
+    type: select
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Server.png?raw=true
+    proxies:
+      - 自动选择
+      - 手动选择
+
+  - name: 手动选择
+    type: select
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Rocket.png?raw=true
+    use:
+      - all-sub
+
+
+  - name: 自动选择
+    type: url-test
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Auto.png?raw=true
+    url: https://captive.apple.com
+    interval: 300
+    use:
+      - all-sub
