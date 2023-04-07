@@ -41,11 +41,10 @@ dns:
     - '*.msftconnecttest.com'
     # Bilibili CDN
     - '*.mcdn.bilivideo.cn'
-  # 假如你在使用 proxy-groups => ssid-policy 时，nameserver 下必须配置 system，否则部分请求会异常。
+  # 假如你在使用 proxy-groups => ssid-policy 时，nameserver 下必须配置 system，否则部分请求会异常。不建议配置超过 2 个 DNS 服务器，会增加系统功耗
   nameserver:
+    - system # 使用 iOS 系统 DNS
     - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-    - 192.168.99.1 # 这里是特定的局域网网关 DNS，如有需要自行替换
 
 http:
   mitm:
