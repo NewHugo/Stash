@@ -163,13 +163,13 @@ rule-providers:
 
   ChinaCompanyIp: # 中国云服务商ip端
     <<: *remote-resources-default-config
-    behavior: classical
+    behavior: ipcidr
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml?raw=true
     path: ./ruleset/ChinaCompanyIp.yaml
 
   ChinaIp: # 内容：中国IP地址段ipv4
     <<: *remote-resources-default-config
-    behavior: classical
+    behavior: ipcidr
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml?raw=true
     path: ./ruleset/ChinaIp.yaml
 
