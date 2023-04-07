@@ -69,10 +69,9 @@ proxy-providers:
   # 全部节点
   all-sub: &all-sub # 建立锚点
     <<: *remote-resources-default-config
-    # 此处默认使用 Sub-Store 订阅链接，如果需要使用其他订阅链接，可以替换下面的 url 即可
-    # Sub-Store 与 Clash 类型订阅链接，都可以作为 url 的值。多个链接使用英文符号的竖杠 | 隔开一起写上即可
-    #SSR订阅链接请按后面格式将SSR订阅地址替换后面的《订阅链接》四字,格式为url: "https://api.v1.mk/sub?target=clash&url=订阅链接&emoji=true&list=true&udp=true"
-    url: https://sub.store/download/collection/subs
+    # 1.此处使用 Sub-Store 与 Clash 类型订阅链接 可以替换下面的 url：后所有文字包括""多个链接使用英文符号的竖杠 | 隔开一起写上即可
+    # 2.使用非Sub-Store 与 Clash 类型订阅替换后面""之间订阅链接四个字为机场url地址即可
+    url: "https://api.v1.mk/sub?target=clash&url=订阅链接&emoji=true&list=true&udp=true"
     path: ./all.yaml
     health-check:
       enable: true
