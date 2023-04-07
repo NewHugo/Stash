@@ -3,14 +3,14 @@
 # 本配置，解决DNS泄露，无分流群组，且为自用!(部分国内网站可能走节点)
 
 # ⚠️注意查看各配置后的说明修改配置⚠️
-###########################################################
-# @created: 2023-04-07
-# @update 2023-04-07
-# @source https://github.com/NewHugo/Stash
-###########################################################
-# 参考配置：
-# https://stash.wiki
-###########################################################
+####################################
+# created: 2023-04-07              #
+# update 2023-04-07                #
+# https://github.com/NewHugo/Stash #
+####################################
+# 参考配置：                        #
+# https://stash.wiki               #
+####################################
 # autocorrect-disable
 mixed-port: 7890
 mode: rule
@@ -58,7 +58,7 @@ http:
 
 # 假如用组合订阅多个机场，就没必要使用 subscribe-url 了
 subscribe-url: https://sub.store/download/collection/subs
-# 替换上面文字用于 Stash 获取机场流量信息并在主页显示 （Stash1.6.1 build 287+支持）
+# 替换上面文字用于 Stash 获取机场流量信息并在主页显示
 
 # 远程资源默认配置
 remote-resources-default-config: &remote-resources-default-config
