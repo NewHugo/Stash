@@ -1,1 +1,1 @@
-# Stash 及 Clash 的自用规则和配置文件
+# Stash自用规则及OpenClash自用订阅转换自定义模板
