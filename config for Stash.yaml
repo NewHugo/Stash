@@ -1,7 +1,7 @@
 # ⚠️本配置仅适用于Stash，Clash(Premium)内核不可使用本配置
 
-# 本配置，解决DNS泄露，无分流群组，且为自用!
-
+# 本配置，解决DNS泄露，无分流群组，且为自用!(部分国内网站可能走节点)
+⚠️⚠️⚠️注意查看各配置后的说明修改配置⚠️⚠️⚠️
 ###########################################################
 # @created: 2023-04-07
 # @update 2023-04-07
@@ -81,22 +81,22 @@ proxy-providers:
 proxies:
 
 proxy-groups:  
-  - name: SSID 自动策略
+  - name: SSID自动策略
     type: select
     icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/SSID.png?raw=true
     proxies:
     # 此处为配置文件中的已有策略组
-      - Server 策略
+      - Server策略
       - DIRECT  # 虽说 DIRECT 是保留字。但必须配置该策略选项，于此代理集的 proxies 下，不然该代理集就只有 1 个策略选项
     ssid-policy:
     # cellular: 保留字，指代蜂窝数据条件下
     # default：保留字，指代其他 SSID 条件下，默认为 DIRECT 策略
     # DIRECT：保留字，直连策略
       Fuck_Great Fire Wall: DIRECT  # Fuck_Great Fire Wall，为 SSID 名称
-      cellular: Server 策略
-      default: Server 策略
+      cellular: Server策略
+      default: Server策略
 
-  - name: Server 策略
+  - name: Server策略
     type: select
     icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Server.png?raw=true
     proxies:
@@ -109,7 +109,6 @@ proxy-groups:
     use:
       - all-sub
 
-
   - name: 自动选择
     type: url-test
     icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Auto.png?raw=true
@@ -117,3 +116,53 @@ proxy-groups:
     interval: 300
     use:
       - all-sub
+
+rule-providers:
+
+  GoogleCNProxyIP:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/GoogleCNProxyIP.yaml?raw=true
+    path: ./ruleset/GoogleCNProxyIP.yaml
+
+  LocalAreaNetwork:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml?raw=true
+    path: ./ruleset/LocalAreaNetwork.yaml
+
+  UnBan:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml?raw=true
+    path: ./ruleset/UnBan.yaml
+
+  ChinaDomain:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml?raw=true
+    path: ./ruleset/ChinaDomain.yaml
+
+  ChinaMedia:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml?raw=true
+    path: ./ruleset/ChinaMedia.yaml
+
+  BanAD:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml?raw=true
+    path: ./ruleset/BanAD.yaml
+
+  BanProgramAD:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml?raw=true
+    path: ./ruleset/BanProgramAD.yaml
+
+  ChinaCompanyIp:
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml?raw=true
+    path: ./ruleset/ChinaCompanyIp.yaml
