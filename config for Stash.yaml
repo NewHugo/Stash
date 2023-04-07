@@ -45,7 +45,7 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-    - 192.168.5.1 # 这里是特定的局域网网关 DNS，如有需要自行替换
+    - 192.168.99.1 # 这里是特定的局域网网关 DNS，如有需要自行替换
 
 http:
   mitm:
