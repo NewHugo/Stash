@@ -136,17 +136,17 @@ rule-providers:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml?raw=true
     path: ./ruleset/UnBan.yaml
 
-  ChinaMax: # 内容：ChinaMax
+  ChinaDomain: # 内容：ChinaDomain
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml?raw=true
-    path: ./ruleset/ChinaMax.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml.list?raw=true
+    path: ./ruleset/ChinaDomain.yaml
 
-  ChinaMax_Domain: # 内容：ChinaMax_Domain
+  ChinaMedia: # 内容：ChinaMedia
     <<: *remote-resources-default-config
-    behavior: domain
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.yaml?raw=true
-    path: ./ruleset/ChinaMax_Domain.yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml?raw=true
+    path: ./ruleset/ChinaMedia.yaml
 
   BanAD: # 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
     <<: *remote-resources-default-config
@@ -166,11 +166,11 @@ rule-providers:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml?raw=true
     path: ./ruleset/ChinaCompanyIp.yaml
 
-  ChinaMax_IP: # 内容：ChinaMax_IP
+  ChinaIp: # 内容：ChinaIp
     <<: *remote-resources-default-config
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_IP.yaml?raw=true
-    path: ./ruleset/ChinaMax_IP.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml.yaml?raw=true
+    path: ./ruleset/ChinaIp.yaml
 
   Rule-DIRECT: #自用补充直连
     <<: *remote-resources-default-config
@@ -195,12 +195,12 @@ rules:
   - RULE-SET,GoogleCNProxyIP,SSID自动策略
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,UnBan,DIRECT
-  - RULE-SET,ChinaMax,DIRECT
-  - RULE-SET,ChinaMax_Domain,DIRECT
+  - RULE-SET,ChinaDomain,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanProgramAD,REJECT
   - RULE-SET,ChinaCompanyIp,DIRECT
-  - RULE-SET,ChinaMax_IP,DIRECT
+  - RULE-SET,ChinaIp,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
   - RULE-SET,Rule-Proxy,SSID自动策略
   - GEOIP,CN,DIRECT,no-resolve
