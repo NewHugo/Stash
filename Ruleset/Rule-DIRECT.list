@@ -1,5 +1,3 @@
 # 自用需直连服务，共 1 条
 # 万词王
 DOMAIN-SUFFIX,perfectlingo.com
-#微信内置浏览器私有接口
-DOMAIN-SUFFIX,weixinbridge.com
