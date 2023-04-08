@@ -5,7 +5,7 @@
 # ⚠️注意查看各配置后的说明修改配置⚠️
 ####################################
 # created: 2023-04-07              #
-# update 2023-04-07                #
+# update 2023-04-08                #
 # https://github.com/NewHugo/Stash #
 ####################################
 # 参考配置：                        #
@@ -111,7 +111,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Auto.png?raw=true
-    url: https://captive.apple.com
+    url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - all-sub
