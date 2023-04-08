@@ -172,6 +172,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_IP.yaml?raw=true
     path: ./ruleset/ChinaMax_IP.yaml
 
+  Apple_Classical: # 内容：Apple
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml?raw=true
+    path: ./ruleset/Apple_Classical.yaml
+
   Rule-DIRECT: #自用补充直连
     <<: *remote-resources-default-config
     behavior: classical
@@ -201,6 +207,7 @@ rules:
   - RULE-SET,BanProgramAD,REJECT
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,ChinaMax_IP,DIRECT
+  - RULE-SET,Apple_Classical,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
   - RULE-SET,Rule-Proxy,SSID自动策略
   - GEOIP,CN,DIRECT,no-resolve
