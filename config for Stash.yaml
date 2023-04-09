@@ -5,7 +5,7 @@
 # ⚠️注意查看各配置后的说明修改配置⚠️
 ####################################
 # created: 2023-04-07              #
-# update 2023-04-08                #
+# update 2023-04-09                #
 # https://github.com/NewHugo/Stash #
 ####################################
 # 参考配置：                        #
@@ -178,6 +178,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml?raw=true
     path: ./ruleset/Apple_Classical.yaml
 
+  WeChat: # 内容：微信服务
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml?raw=true
+    path: ./ruleset/WeChat.yaml
+
   Rule-DIRECT: #自用补充直连
     <<: *remote-resources-default-config
     behavior: classical
@@ -208,6 +214,7 @@ rules:
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,ChinaMax_IP,DIRECT
   - RULE-SET,Apple_Classical,DIRECT
+  - RULE-SET,WeChat,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
   - RULE-SET,Rule-Proxy,SSID自动策略
   - GEOIP,CN,DIRECT,no-resolve
