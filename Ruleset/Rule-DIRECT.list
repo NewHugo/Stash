@@ -3,3 +3,5 @@
 DOMAIN-SUFFIX,perfectlingo.com
 #  雷速
 DOMAIN-KEYWORD,leisuapi
+#  极光推送
+DOMAIN-KEYWORD,jpush.io
