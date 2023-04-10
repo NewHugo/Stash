@@ -1,3 +1,4 @@
 payload:
   - DOMAIN-SUFFIX,perfectlingo.com #万词王
   - DOMAIN-KEYWORD,leisu #雷速
+  - DOMAIN-KEYWORD,jpush #极光推送
