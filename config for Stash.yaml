@@ -124,6 +124,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/GoogleCNProxyIP.yaml?raw=true
     path: ./ruleset/GoogleCNProxyIP.yaml
 
+  Bing: # 内容：Bing
+    <<: *remote-resources-default-config
+    behavior: classical
+    url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Bing/Bing.yaml?raw=true
+    path: ./ruleset/Bing.yaml
+
   LocalAreaNetwork: # 本地/局域网地址
     <<: *remote-resources-default-config
     behavior: classical
@@ -205,6 +211,7 @@ rules:
   - DOMAIN-SUFFIX,vercel.app,SSID自动策略
 # ################ Remote Rule
   - RULE-SET,GoogleCNProxyIP,SSID自动策略
+  - RULE-SET,Bing,SSID自动策略
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,UnBan,DIRECT
   - RULE-SET,ChinaMax,DIRECT
