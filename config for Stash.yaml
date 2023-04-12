@@ -218,8 +218,8 @@ rules:
   - RULE-SET,ChinaMax_Domain,DIRECT
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanProgramAD,REJECT
-  - RULE-SET,ChinaCompanyIp,DIRECT
-  - RULE-SET,ChinaMax_IP,DIRECT
+  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
+  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
   - RULE-SET,Apple_Classical,DIRECT
   - RULE-SET,WeChat,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
