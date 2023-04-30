@@ -220,10 +220,9 @@ rules:
   - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanProgramAD,REJECT
-  - RULE-SET,BanProgramAD,REJECT
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
-  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
-  - RULE-SET,Apple_Classical,DIRECT
+  - RULE-SET,ChinaIp,DIRECT,no-resolve
+  - RULE-SET,Bing,SSID自动策略
   - RULE-SET,WeChat,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
   - RULE-SET,Rule-Proxy,SSID自动策略
