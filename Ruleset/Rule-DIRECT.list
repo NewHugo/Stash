@@ -23,3 +23,5 @@ DOMAIN-SUFFIX,lgyy.vip
 # 牛蛙助手
 DOMAIN-SUFFIX,ios222.com
 IP-CIDR,193.168.0.1,no-resolve
+#  牛八
+DOMAIN-KEYWORD,n8
