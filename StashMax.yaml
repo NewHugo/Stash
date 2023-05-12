@@ -19,7 +19,19 @@ subscribe-url: https://sub.store/download/collection/subs
 remote-resources-default-config: &remote-resources-default-config
   type: http
   interval: 86400
-proxies:
+
+proxy-providers:
+  # 全部节点
+  all-sub: &all-sub # 建立锚点
+    <<: *remote-resources-default-config
+    # 1.此处使用 Sub-Store 与 Clash 类型订阅链接 可以替换下面的 url：后所有文字包括""多个链接使用英文符号的竖杠 | 隔开一起写上即可
+    # 2.使用非Sub-Store 与 Clash 类型订阅替换后面""之间订阅链接四个字为机场url地址即可
+    url: "https://api.v1.mk/sub?target=clash&url=订阅链接&emoji=true&list=true&udp=true"
+    path: ./all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:  
   - name: SSID自动策略
