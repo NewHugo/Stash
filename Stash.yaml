@@ -9,7 +9,6 @@ mixed-port: 7890
 mode: rule
 
 proxy-groups:
-- icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/SSID.png?raw=true
   name: SSID自动策略
   proxies:
   - Server策略
@@ -20,20 +19,17 @@ proxy-groups:
     default: Server策略
     type: select
 
-- icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Server.png?raw=true
   name: Server策略
   proxies:
   - 自动选择
   - 节点选择
   type: select
 
-- icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Rocket.png?raw=true
   name: 节点选择
   type: select
   use:
   - all-sub
 
-- icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Auto.png?raw=true
   interval: 300
   name: 自动选择
   type: url-test
@@ -41,7 +37,6 @@ proxy-groups:
   use:
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png?raw=true
   name: Bing
   proxies:
   - SSID自动策略
@@ -51,7 +46,6 @@ proxy-groups:
   - SSID自动策略
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png?raw=true
   name: YouTube
   proxies:
   - SSID自动策略
@@ -61,7 +55,6 @@ proxy-groups:
   - SSID自动策略
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png?raw=true
   name: Netflix
   proxies:
   - SSID自动策略
@@ -71,7 +64,6 @@ proxy-groups:
   - SSID自动策略
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png?raw=true
   name: Disney+
   proxies:
   - SSID自动策略
@@ -81,7 +73,6 @@ proxy-groups:
   - SSID自动策略
   - all-sub
 
-- icon: https://github.com/namelessup/Koolson-Qure/blob/master/IconSet/Color/Apple_TV.png?raw=true
   name: AppleTV
   proxies:
   - SSID自动策略
@@ -92,7 +83,6 @@ proxy-groups:
   - DIRECT
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png?raw=true
   name: TikTok
   proxies:
   - SSID自动策略
@@ -102,7 +92,6 @@ proxy-groups:
   - SSID自动策略
   - all-sub
 
-- icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/gamez.png?raw=true
   name: EA烂橘子
   proxies:
   - SSID自动策略
