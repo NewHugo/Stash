@@ -74,20 +74,20 @@ rule-providers:
 
   GoogleCNProxyIP: # 内容：GoogleCNProxyIP 谷歌中国服务
     <<: *remote-resources-default-config
-    behavior: classical
-    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/GoogleCNProxyIP.yaml?raw=true
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
     path: ./ruleset/GoogleCNProxyIP.yaml
 
   Bing: # 内容：Bing
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Bing/Bing.yaml?raw=true
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
     path: ./ruleset/Bing.yaml
 
   LocalAreaNetwork: # 本地/局域网地址
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml?raw=true
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
     path: ./ruleset/LocalAreaNetwork.yaml
 
   UnBan: # Unbreak 白名单 不应该被广告链接的网站
@@ -168,8 +168,8 @@ rules:
   - RULE-SET,Bing,SSID自动策略
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,UnBan,DIRECT
-  - RULE-SET,ChinaCompanyIp,no-resolve,DIRECT
-  - RULE-SET,ChinaMax_IP,no-resolve,DIRECT
+  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
+  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
   - RULE-SET,BanAD,REJECT
