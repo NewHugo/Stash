@@ -146,11 +146,11 @@ rules:
   # 避免 Sub-Store 访问不了面板
   - DOMAIN-SUFFIX,vercel.app,SSID自动策略
 # ################ Remote Rule
+  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
+  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
   - RULE-SET,GoogleCNProxyIP,SSID自动策略
   - RULE-SET,Bing,SSID自动策略
   - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
-  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
   - RULE-SET,Apple_Domain,DIRECT
