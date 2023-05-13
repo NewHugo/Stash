@@ -18,7 +18,7 @@ proxy-groups:
     Fuck_Great Fire Wall: DIRECT
     cellular: Server策略
     default: Server策略
-  type: select
+    type: select
 
 - icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Server.png?raw=true
   name: Server策略
