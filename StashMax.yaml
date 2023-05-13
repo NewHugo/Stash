@@ -75,19 +75,19 @@ rule-providers:
   GoogleCNProxyIP: # 内容：GoogleCNProxyIP 谷歌中国服务
     <<: *remote-resources-default-config
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
+    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/GoogleCNProxyIP.yaml
     path: ./ruleset/GoogleCNProxyIP.yaml
 
   Bing: # 内容：Bing
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
     path: ./ruleset/Bing.yaml
 
   LocalAreaNetwork: # 本地/局域网地址
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
     path: ./ruleset/LocalAreaNetwork.yaml
 
   ChinaMax_Domain: # 内容：ChinaMax_Domain
@@ -99,7 +99,7 @@ rule-providers:
   ChinaCompanyIp: # 中国云服务商ip端
     <<: *remote-resources-default-config
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml
     path: ./ruleset/ChinaCompanyIp.yaml
 
   ChinaMax_IP: # 内容：ChinaMax_IP
@@ -111,7 +111,7 @@ rule-providers:
   ChinaMax: # 内容：ChinaMax
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml
     path: ./ruleset/ChinaMax.yaml
 
  Apple_Domain: # 内容：Apple
@@ -120,32 +120,19 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Domain.txt
     path: ./ruleset/Apple_Domain.yaml
 
-  WeChat: # 内容：微信服务
-    <<: *remote-resources-default-config
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.list
-    path: ./ruleset/WeChat.yaml
-
   Rule-DIRECT: #自用补充直连
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/Rule-DIRECT.list
+    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/Rule-DIRECT.yaml
     path: ./ruleset/Rule-DIRECT.yaml
 
   Rule-Proxy: #自用补充代理
     <<: *remote-resources-default-config
     behavior: classical
-    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/Rule-Proxy.list
+    url: https://raw.githubusercontent.com/NewHugo/Stash/main/Ruleset/Rule-Proxy.yaml
     path: ./ruleset/Rule-Proxy.yaml
 
 rules:
-# ################ Local Rule
-  # 避免重新导入配置后无法下载 GitHub 上的资源
-  - DOMAIN,raw.githubusercontent.com,SSID自动策略
-  - DOMAIN,github.com,SSID自动策略
-  # 避免 Sub-Store 访问不了面板
-  - DOMAIN-SUFFIX,vercel.app,SSID自动策略
-# ################ Remote Rule
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
   - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
   - RULE-SET,GoogleCNProxyIP,SSID自动策略
@@ -154,7 +141,6 @@ rules:
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
   - RULE-SET,Apple_Domain,DIRECT
-  - RULE-SET,WeChat,DIRECT
   - RULE-SET,Rule-DIRECT,DIRECT
   - RULE-SET,Rule-Proxy,SSID自动策略
   - GEOIP,CN,DIRECT,no-resolve
