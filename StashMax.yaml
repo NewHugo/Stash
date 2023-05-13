@@ -168,8 +168,8 @@ rules:
   - RULE-SET,Bing,SSID自动策略
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,UnBan,DIRECT
-  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
-  - RULE-SET,ChinaMax_IP,DIRECT,no-resolve
+  - RULE-SET,ChinaCompanyIp,no-resolve,DIRECT
+  - RULE-SET,ChinaMax_IP,no-resolve,DIRECT
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
   - RULE-SET,BanAD,REJECT
