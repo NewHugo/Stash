@@ -53,6 +53,22 @@ proxy-groups:
     proxies:
       - 自动选择
       - 手动选择
+      
+  - name: 自动选择
+    type: url-test
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Auto.png?raw=true
+    url: https://captive.apple.com
+    interval: 300
+    use:
+      - all-sub
+      
+  - name: 手动选择
+    type: url-test
+    icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Rocket.png?raw=true
+    url: https://captive.apple.com
+    interval: 300
+    use:
+      - all-sub
 
 rule-providers:
 
