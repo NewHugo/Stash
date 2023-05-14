@@ -63,7 +63,7 @@ proxy-groups:
       - all-sub
       
   - name: 手动选择
-    type: url-test
+    type: select
     icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Rocket.png?raw=true
     url: https://captive.apple.com
     interval: 300
