@@ -20,3 +20,5 @@ payload:
   - DOMAIN-SUFFIX,qweather.com #  和风天气
   - DOMAIN-SUFFIX,xunji.gxzckj.com #  训记
   - DOMAIN-SUFFIX,shzhida.com #  挚达
+  - DOMAIN-SUFFIX,volkswagen.com  #  大众商城
+  - DOMAIN-SUFFIX,csvw.com  #  大众app
