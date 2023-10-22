@@ -4,4 +4,4 @@ DOMAIN-SUFFIX,services.googleapis.cn
 DOMAIN,raw.githubusercontent.com
 DOMAIN,github.com
 DOMAIN-SUFFIX,vercel.app
-DOMAIN-SUFFIX,api.nn.ci
+DOMAIN-SUFFIX,nn.ci
