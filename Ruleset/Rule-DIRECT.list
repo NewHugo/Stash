@@ -55,3 +55,5 @@ DOMAIN-SUFFIX,csvw.com
 DOMAIN-SUFFIX,volkswagen.com
 #  梅赛德斯奔驰
 DOMAIN-SUFFIX,mercedes-benz.com
+#  牛八
+- DOMAIN-SUFFIX,niu8.com
