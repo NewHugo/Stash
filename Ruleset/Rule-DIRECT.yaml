@@ -23,4 +23,5 @@ payload:
   - DOMAIN-SUFFIX,volkswagen.com  #  大众商城
   - DOMAIN-SUFFIX,csvw.com  #  大众app
   - DOMAIN-SUFFIX,mercedes-benz.com  #  梅赛德斯奔驰
-  - DOMAIN-SUFFIX,niu8api.com  #  牛八
+  - DOMAIN-KEYWORD,niu8  #  牛八
+  - DOMAIN-KEYWORD,n8  #  牛八
