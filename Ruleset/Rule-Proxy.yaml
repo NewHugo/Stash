@@ -6,3 +6,4 @@ payload: #自用需代理服务,数量 2 条
   - DOMAIN,github.com
   - DOMAIN-SUFFIX,nn.ci
   - DOMAIN-SUFFIX,stream-link.online
+  - DOMAIN-SUFFIX,stream-link.org
