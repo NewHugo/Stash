@@ -26,3 +26,8 @@ payload:
   - DOMAIN-SUFFIX,mercedes-benz.com  #  梅赛德斯奔驰
   - DOMAIN-KEYWORD,niu8  #  牛八
   - DOMAIN-KEYWORD,n8  #  牛八
+  - DOMAIN-SUFFIX,livednow.com  #  livednow
+  - DOMAIN-SUFFIX,hinet.net  #  livednow
+  - DOMAIN-SUFFIX,hoy.tv  #  livednow
+  - DOMAIN-SUFFIX,akamaized.net  #  livednow
+  - DOMAIN-SUFFIX,tvb.com  #  livednow
