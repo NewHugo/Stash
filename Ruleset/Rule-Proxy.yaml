@@ -7,3 +7,8 @@ payload: #自用需代理服务,数量 2 条
   - DOMAIN-SUFFIX,nn.ci
   - DOMAIN-SUFFIX,stream-link.online
   - DOMAIN-SUFFIX,stream-link.org
+  - DOMAIN-SUFFIX,livednow.com  #  livednow
+  - DOMAIN-SUFFIX,hinet.net  #  livednow
+  - DOMAIN-SUFFIX,hoy.tv  #  livednow
+  - DOMAIN-SUFFIX,akamaized.net  #  livednow
+  - DOMAIN-SUFFIX,tvb.com  #  livednow
