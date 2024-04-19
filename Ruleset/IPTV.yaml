@@ -1,1 +1,7 @@
-
+  - DOMAIN-SUFFIX,stream-link.online   #  stream-link 
+  - DOMAIN-SUFFIX,stream-link.org   #  stream-link
+  - DOMAIN-SUFFIX,livednow.com  #  livednow
+  - DOMAIN-SUFFIX,hinet.net  #  livednow
+  - DOMAIN-SUFFIX,hoy.tv  #  livednow
+  - DOMAIN-SUFFIX,akamaized.net  #  livednow
+  - DOMAIN-SUFFIX,tvb.com  #  livednow
