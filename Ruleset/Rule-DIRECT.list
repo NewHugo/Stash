@@ -19,15 +19,11 @@ DOMAIN-SUFFIX,boohee.com
 DOMAIN-SUFFIX,app-measurement.com
 #  拦截100
 DOMAIN-SUFFIX,lanjie100.com
-#  yeah.net
-DOMAIN-SUFFIX,yeah.net
 #  和风天气
 DOMAIN-SUFFIX,qweather.net
 DOMAIN-SUFFIX,qweather.com
 #  训记
 DOMAIN-SUFFIX,xunji.gxzckj.com
-#  yeslivetv.com
-DOMAIN-SUFFIX,yeslivetv.com
 #  挚达
 DOMAIN-SUFFIX,shzhida.com
 #  上汽大众
