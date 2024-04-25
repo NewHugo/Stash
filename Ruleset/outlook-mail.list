@@ -1,3 +1,5 @@
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,hotmail.com
 DOMAIN,imap-mail.outlook.com
 DOMAIN,outlook.office365.com
 DOMAIN,smtp-mail.outlook.com
