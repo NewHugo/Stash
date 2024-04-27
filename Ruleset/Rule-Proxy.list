@@ -1,8 +1,8 @@
 # 自用需代理服务,数量 2 条
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,services.googleapis.cn
-DOMAIN,raw.githubusercontent.com
-DOMAIN,github.com
+DOMAIN-SUFFIX,,raw.githubusercontent.com
+DOMAIN-SUFFIX,,github.com
 DOMAIN-SUFFIX,vercel.app
 DOMAIN-SUFFIX,nn.ci
 DOMAIN-SUFFIX,api.xhofe.top
