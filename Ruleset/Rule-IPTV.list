@@ -1,4 +1,4 @@
-#   Livednow
+#    Livednow
 DOMAIN-SUFFIX,livednow.com
 DOMAIN-SUFFIX,hinet.net
 DOMAIN-SUFFIX,hoy.tv
@@ -7,3 +7,9 @@ DOMAIN-SUFFIX,tvb.com
 #    stream-link
 DOMAIN-SUFFIX,stream-link.online
 DOMAIN-SUFFIX,stream-link.org
+#    4gtv
+DOMAIN-SUFFIX,4gtv.tv
+#    hinet
+DOMAIN-SUFFIX,hinet.net
+#    ofiii
+DOMAIN-SUFFIX,ofiii.com
