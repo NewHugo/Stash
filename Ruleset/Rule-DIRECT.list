@@ -42,3 +42,6 @@ DOMAIN-SUFFIX,ccipan.net
 DOMAIN-SUFFIX,tlivesource.com
 #  培优
 DOMAIN-SUFFIX,jiemaedu.com
+#  IPTV
+IP-CIDR,183.206.0.0/15,no-resolve
+DOMAIN-SUFFIX,gitv.tv
