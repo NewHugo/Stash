@@ -47,5 +47,6 @@ DOMAIN-SUFFIX,jiemaedu.com
 #  IPTV
 IP-CIDR,183.206.0.0/15,no-resolve
 DOMAIN-SUFFIX,gitv.tv
+DOMAIN,beesport.livednow.com
 #  IPV6测试
 DOMAIN-SUFFIX,ipv6.stream
