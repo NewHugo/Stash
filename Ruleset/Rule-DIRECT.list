@@ -48,3 +48,12 @@ DOMAIN-SUFFIX,tlivesource.com
 DOMAIN-SUFFIX,jiemaedu.com
 #  IPV6测试
 DOMAIN-SUFFIX,ipv6.stream
+#  IPTV
+DOMAIN-SUFFIX,dnsany.com
+DOMAIN-SUFFIX,cmvideo.cn
+DOMAIN-SUFFIX,chinamobile.com
+DOMAIN-SUFFIX,mobaibox.com
+DOMAIN-SUFFIX,gitv.tv
+DOMAIN-SUFFIX,cctv.cn
+DOMAIN-SUFFIX,yangshipin.cn
+IP-CIDR,183.206.0.0/15,no-resolve
