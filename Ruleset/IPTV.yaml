@@ -1,17 +1,11 @@
-#    Livednow
+payload:
   - DOMAIN-SUFFIX,livednow.com
   - DOMAIN-SUFFIX,hinet.net
   - DOMAIN-SUFFIX,hoy.tv
   - DOMAIN-SUFFIX,akamaized.net
-  - DOMAIN-SUFFIX,tvb.com
-#    stream-link
   - DOMAIN-SUFFIX,stream-link.online
   - DOMAIN-SUFFIX,stream-link.org
-#    4gtv
   - DOMAIN-SUFFIX,4gtv.tv
-#    hinet
   - DOMAIN-SUFFIX,hinet.net
-#    ofiii
   - DOMAIN-SUFFIX,ofiii.com
-#    orz-7
   - DOMAIN-SUFFIX,orz-7.com
