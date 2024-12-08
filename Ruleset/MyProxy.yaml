@@ -1,0 +1,16 @@
+# 自用需代理服务,数量 14 条
+payload:
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+  - DOMAIN-SUFFIX,services.googleapis.cn
+  - DOMAIN-SUFFIX,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,vercel.app
+  - DOMAIN-SUFFIX,nn.ci
+  - DOMAIN-SUFFIX,api.xhofe.top
+  - DOMAIN-SUFFIX,api.themoviedb.org
+  - DOMAIN-SUFFIX,api.tmdb.org
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,sakurapy.de
+  - DOMAIN-SUFFIX,kelee.one
+  - DOMAIN-SUFFIX,missav.com
